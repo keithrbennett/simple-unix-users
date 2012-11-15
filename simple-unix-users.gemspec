@@ -14,7 +14,7 @@ filespec, and provides simple operations on the collection of users,
 and individual users.
  }
   gem.summary       = %q{Manages Unix user information based on the content of /etc/passwd.}
-  gem.homepage      = ""
+  gem.homepage      = "https://github.com/keithrbennett/simple-unix-users"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
