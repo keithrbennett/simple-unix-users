@@ -28,7 +28,13 @@ it 'should detect a nonexistent home correctly' do
   subject.has_home_dir?.should be_false
 end
 
+it 'should calculate uid_number correctly' do
+  subject.uid_number.should == subject.uid.to_i
+end
 
+it 'should calculate gid_number correctly' do
+  subject.gid_number.should == subject.gid.to_i
+end
 
 end
 
