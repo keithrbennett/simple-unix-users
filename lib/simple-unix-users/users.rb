@@ -35,7 +35,7 @@ class Users < Array
   # Returns a new instance of Users containing only those users
   # whose shell is not '/bin/false'.
   def having_shell
-    Users.new(reject { |user| user.shell == '/bin/false' })
+    Users.new(select { |user| user.has_shell? })
   end
 
   def having_shell_of(shell)
@@ -47,11 +47,12 @@ class Users < Array
   end
 
   def having_home
-    Users.new(reject { |user| user.home_dir == '/nonexistent' })
+    Users.new(select { |user| user.has_home? })
   end
 
   def not_having_home
-    Users.new(self - having_home)
+    Users.new(select { |user| ! user.has_home? })
+    # or, less efficiently: Users.new(self - having_home)
   end
 
   # Returns a new Users instance consisting only of

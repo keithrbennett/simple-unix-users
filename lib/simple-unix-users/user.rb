@@ -22,6 +22,14 @@ class User
     `du -sm #{home_dir}`.to_i
   end
 
+  def has_shell?
+    shell != '/bin/false'
+  end
+
+  def has_home?
+     home_dir != '/nonexistent'
+  end
+
   def groups
     `groups #{name}`.chomp.split(':').last.strip.split(' ')
   end
