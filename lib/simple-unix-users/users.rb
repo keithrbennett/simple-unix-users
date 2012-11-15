@@ -9,7 +9,9 @@ class Users < Array
   # Reads the user information from the passwd file, and returns
   # a Users instance.
   def self.from_passwd_file(filespec = '/etc/passwd')
-    Users.new(File.readlines(filespec))
+    file_lines = File.readlines(filespec)
+    non_comment_lines = file_lines.reject { |line| /^#/ === line }
+    Users.new(non_comment_lines)
   end
 
   # Constructor; takes an array of passwd-formatted lines, or
