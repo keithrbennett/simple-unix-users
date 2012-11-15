@@ -1,6 +1,6 @@
 require 'rspec'
 
-require_relative '../../lib/ruby-sysadmin-examples/users.rb'
+require_relative '../../lib/simple-unix-users/users.rb'
 
 describe Users do
 
