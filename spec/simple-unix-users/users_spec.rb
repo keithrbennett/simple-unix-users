@@ -4,7 +4,7 @@ require_relative '../../lib/simple-unix-users/users.rb'
 
 describe Users do
 
-subject { Users.from_passwd_file }
+subject { Users.from_passwd_file(File.join(File.dirname(__FILE__), 'passwd-sample')) }
 
 it 'should load a list of users' do
   subject.should be_a Array
