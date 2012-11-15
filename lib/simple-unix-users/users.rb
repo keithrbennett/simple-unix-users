@@ -46,13 +46,13 @@ class Users < Array
     Users.new(self - having_shell)
   end
 
-  def having_home
-    Users.new(select { |user| user.has_home? })
+  def having_home_dir
+    Users.new(select { |user| user.has_home_dir? })
   end
 
-  def not_having_home
-    Users.new(select { |user| ! user.has_home? })
-    # or, less efficiently: Users.new(self - having_home)
+  def not_having_home_dir
+    Users.new(select { |user| ! user.has_home_dir? })
+    # or, less efficiently: Users.new(self - having_home_dir)
   end
 
   # Returns a new Users instance consisting only of

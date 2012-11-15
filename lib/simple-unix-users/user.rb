@@ -4,7 +4,10 @@
 class User
 
   attr_accessor :name, :dummy_pw, :uid, :gid, :personal_data, :home_dir, :shell
-  
+
+  NULL_SHELL     = '/bin/false'
+  NULL_HOME_DIR  = '/nonexistent'
+
   def initialize(line)
     @name, @dummy_pw, @uid, @gid, p_data, @home_dir, @shell = line.chomp.split(':')
     @personal_data = p_data.split(',')
@@ -23,11 +26,11 @@ class User
   end
 
   def has_shell?
-    shell != '/bin/false'
+    shell != NULL_SHELL
   end
 
-  def has_home?
-     home_dir != '/nonexistent'
+  def has_home_dir?
+     home_dir != NULL_HOME_DIR
   end
 
   def groups

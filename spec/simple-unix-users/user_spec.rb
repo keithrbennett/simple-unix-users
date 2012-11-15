@@ -19,5 +19,17 @@ it 'should create fields correctly' do
   subject.shell.should == '/usr/bin/zsh'
 end
 
+it 'should detect an existing home correctly' do
+  subject.has_home_dir?.should be_true
 end
+
+it 'should detect a nonexistent home correctly' do
+  subject.home_dir = User::NULL_HOME_DIR
+  subject.has_home_dir?.should be_false
+end
+
+
+
+end
+
 

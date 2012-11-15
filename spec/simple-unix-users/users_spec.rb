@@ -51,9 +51,9 @@ it 'should correctly include users in having_shell_of' do
 end
 
 it 'should correctly include users in having_home and not_having_home' do
-  user_with_home = subject.detect { |user| user.has_home? }
-  subject.having_home.should include(user_with_home)
-  subject.not_having_home.should_not include(user_with_home) 
+  user_with_home_dir = subject.detect { |user| user.has_home_dir? }
+  subject.having_home_dir.should include(user_with_home_dir)
+  subject.not_having_home_dir.should_not include(user_with_home_dir) 
 end
 
 it 'should correctly find users with having_gid' do
