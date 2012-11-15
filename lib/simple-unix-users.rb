@@ -1,5 +1,6 @@
 require "simple-unix-users/version"
 
 module SimpleUnixUsers
-  # Your code goes here...
+  require_relative 'simple-unix-users/user'
+  require_relative 'simple-unix-users/users'
 end
