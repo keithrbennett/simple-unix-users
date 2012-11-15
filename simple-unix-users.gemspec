@@ -5,11 +5,15 @@ require 'simple-unix-users/version'
 
 Gem::Specification.new do |gem|
   gem.name          = "simple-unix-users"
-  gem.version       = Simple::Unix::Users::VERSION
+  gem.version       = SimpleUnixUsers::VERSION
   gem.authors       = ["Keith R. Bennett"]
   gem.email         = ["keithrbennett@gmail.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.description   = %q{
+Reads and parses user information from /etc/passwd or a specified
+filespec, and provides simple operations on the collection of users,
+and individual users.
+ }
+  gem.summary       = %q{Manages Unix user information based on the content of /etc/passwd.}
   gem.homepage      = ""
 
   gem.files         = `git ls-files`.split($/)

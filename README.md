@@ -1,6 +1,15 @@
-# Simple::Unix::Users
+# SimpleUnixUsers
 
-TODO: Write a gem description
+Reads and parses user information from /etc/passwd or a specified
+filespec, and provides simple operations on the collection of users,
+and individual users.
+
+This code was written as an example of something Ruby could be useful
+for when administering a Unix system.
+
+It's just a starting point, and lacks necessary error checking and
+polish.
+
 
 ## Installation
 
@@ -15,15 +24,14 @@ And then execute:
 Or install it yourself as:
 
     $ gem install simple-unix-users
+:w
 
 ## Usage
 
-TODO: Write usage instructions here
+require 'simple-unix-users'
 
-## Contributing
+users = Users.new
+# or
+users = Users.new('my-test-passwd-file')
+# Then you can use the services provided by the Users and User classes.
 
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request

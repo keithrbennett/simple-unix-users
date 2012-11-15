@@ -1,6 +1,6 @@
 require_relative 'user'
 
-  # This class is for illustrative purposes and lacks necessary error handling.
+# This class is for illustrative purposes and lacks necessary error handling.
 
 # Manages a collection of users (instances of class 'User'),
 # optionally loaded from /etc/passwd.

@@ -1,9 +1,5 @@
 require "simple-unix-users/version"
 
-module Simple
-  module Unix
-    module Users
-      # Your code goes here...
-    end
-  end
+module SimpleUnixUsers
+  # Your code goes here...
 end

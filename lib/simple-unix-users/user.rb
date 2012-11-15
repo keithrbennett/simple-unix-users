@@ -6,9 +6,8 @@ class User
   attr_accessor :name, :dummy_pw, :uid, :gid, :personal_data, :home_dir, :shell
   
   def initialize(line)
-    @name, @dummy_pw, @uid, @gid, p_data, @home_dir, @shell = line.split(':')
+    @name, @dummy_pw, @uid, @gid, p_data, @home_dir, @shell = line.chomp.split(':')
     @personal_data = p_data.split(',')
-    @shell.chomp!  # remove any trailing newline
   end
 
   def uid_number

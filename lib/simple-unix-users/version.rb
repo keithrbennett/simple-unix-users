@@ -1,7 +1,3 @@
-module Simple
-  module Unix
-    module Users
-      VERSION = "0.0.1"
-    end
-  end
+module SimpleUnixUsers
+  VERSION = "0.0.1"
 end
