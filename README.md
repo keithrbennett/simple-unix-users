@@ -28,10 +28,13 @@ Or install it yourself as:
 
 ## Usage
 
+```ruby
 require 'simple-unix-users'
 
 users = Users.new
 # or
 users = Users.new('my-test-passwd-file')
-# Then you can use the services provided by the Users and User classes.
+```
+
+Then you can use the services provided by the Users and User classes.
 
